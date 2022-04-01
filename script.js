@@ -1,9 +1,11 @@
 //TODO:gererate a password
 
-function generatePassword(){
-  //TODO: your code goes here
 
 var passlength = prompt("Choose Length between 8 - 128 characters");
+if (passlength <8) {
+  alert("password length too weak please restart"); 
+} else{}
+
 
 var numeric = confirm("Include Numeric?");
 
@@ -12,6 +14,23 @@ var uppercase = confirm("Include uppercase?");
 var lowercase = confirm("Include Lowercase?");
 
 var special = confirm("Include special characters?");
+
+
+
+
+
+function generatePassword(){
+  //TODO: your code goes here
+
+// var passlength = prompt("Choose Length between 8 - 128 characters");
+
+// var numeric = confirm("Include Numeric?");
+
+// var uppercase = confirm("Include uppercase?");
+
+// var lowercase = confirm("Include Lowercase?");
+
+// var special = confirm("Include special characters?");
 
 //=================================================================================
   
@@ -26,6 +45,12 @@ var specialList = ["?", "@", "#", "$", "&", "%", "*", "^", "+", "=" ];
 var userChoice = [];
 
 //================================================================================
+
+// if (passlength <8) {
+//   alert("password length too weak");
+// }
+
+
 
 if (numeric === true) {
   userChoice.push(...numericList);
@@ -57,9 +82,6 @@ for (let i = 0; i < passlength; i++) {
   //uppercase
   //numeric
   // and/or special characters
-
-
-
 //when prompts are answered then a password is generated that matches selected criteria 
 
 // display password
